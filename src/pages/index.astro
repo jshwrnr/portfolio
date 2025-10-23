@@ -4,6 +4,24 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Typography variant="h1">Hi, I'm Josh Werner</Typography>
-  <Typography>a full-stack web developer</Typography>
+  <Typography class="mb-1">Hey, I'm</Typography>
+  <Typography variant="h2">Josh Werner</Typography>
+  <Typography>
+    {"I'm a full-stack developer passionate about creating "}
+    <Typography variant="em">elegant, high-performance</Typography>
+    {" products for the web that balance "}
+    <Typography variant="em">depth</Typography>
+    {" and "}
+    <Typography variant="em">simplicity.</Typography>
+  </Typography>
+  <div class="pt-16">
+    <Typography variant="h2">Projects</Typography>
+    <div class="grid grid-cols-2 gap-4">
+      {
+        Array.from({ length: 4 }).map(() => (
+          <div class="border h-50 rounded-xl border-gray-200" />
+        ))
+      }
+    </div>
+  </div>
 </Layout>

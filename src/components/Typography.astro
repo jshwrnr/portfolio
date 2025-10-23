@@ -1,42 +1,26 @@
 ---
+type TypographyVariant = "h2" | "em" | "p";
+
 interface Props {
-  variant?: "h1" | "h2" | "p";
+  class?: string;
+  variant?: TypographyVariant;
 }
 
-const { variant = "p" } = Astro.props;
+const { variant = "p", class: className } = Astro.props;
 ---
 
 {
-  variant === "h1" ? (
-    <h1 class="lora-400 text-3xl">
-      <slot />
-    </h1>
-  ) : variant === "h2" ? (
-    <h2 class="lora-400">
+  variant === "h2" ? (
+    <h2 class:list={["text-2xl text-gray-700 font-medium mb-4", className]}>
       <slot />
     </h2>
+  ) : variant === "em" ? (
+    <em class:list={["text-gray-600", className]}>
+      <slot />
+    </em>
   ) : (
-    <p class="lora-400">
+    <p class:list={["text-gray-500", className]}>
       <slot />
     </p>
   )
 }
-
-<style>
-  h1,
-  h2,
-  p {
-    margin: 0;
-  }
-</style>
-
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
-
-  .lora-400 {
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-</style>

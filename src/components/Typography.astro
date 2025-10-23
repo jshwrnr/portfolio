@@ -1,17 +1,17 @@
 ---
 interface Props {
-  variant?: 'h1' | 'h2' | 'p';
+  variant?: "h1" | "h2" | "p";
 }
 
-const { variant = 'p' } = Astro.props;
+const { variant = "p" } = Astro.props;
 ---
 
 {
-  variant === 'h1' ? (
-    <h1 class="lora-400">
+  variant === "h1" ? (
+    <h1 class="lora-400 text-3xl">
       <slot />
     </h1>
-  ) : variant === 'h2' ? (
+  ) : variant === "h2" ? (
     <h2 class="lora-400">
       <slot />
     </h2>
@@ -31,10 +31,10 @@ const { variant = 'p' } = Astro.props;
 </style>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
 
   .lora-400 {
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;

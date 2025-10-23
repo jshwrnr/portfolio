@@ -1,0 +1,42 @@
+---
+interface Props {
+  variant?: 'h1' | 'h2' | 'p';
+}
+
+const { variant = 'p' } = Astro.props;
+---
+
+{
+  variant === 'h1' ? (
+    <h1 class="lora-400">
+      <slot />
+    </h1>
+  ) : variant === 'h2' ? (
+    <h2 class="lora-400">
+      <slot />
+    </h2>
+  ) : (
+    <p class="lora-400">
+      <slot />
+    </p>
+  )
+}
+
+<style>
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
+</style>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
+  .lora-400 {
+    font-family: 'Lora', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>

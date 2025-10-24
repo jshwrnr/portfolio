@@ -1,6 +1,7 @@
 ---
 import Typography from "../components/Typography.astro";
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout>
@@ -9,17 +10,14 @@ import Layout from "../layouts/Layout.astro";
   <Typography>
     {"I'm a full-stack developer passionate about creating "}
     <Typography variant="em">elegant, high-performance</Typography>
-    {" products for the web that balance "}
-    <Typography variant="em">depth</Typography>
-    {" and "}
-    <Typography variant="em">simplicity.</Typography>
+    {" products for the web."}
   </Typography>
   <div class="pt-16">
     <Typography variant="h2">Projects</Typography>
     <div class="grid grid-cols-2 gap-4">
       {
-        Array.from({ length: 4 }).map(() => (
-          <div class="border h-50 rounded-xl border-gray-200" />
+        Array.from({ length: 4 }).map((_,i) => (
+          <div class="border h-50 rounded-xl border-gray-200 overflow-hidden"></div>
         ))
       }
     </div>

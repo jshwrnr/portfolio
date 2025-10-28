@@ -3,11 +3,11 @@ import Badge from "./Badge.astro";
 import NewTab from "./NewTab.astro";
 
 interface Props {
-  experience: Experience;
+  experience: Project;
 }
 
 const {
-  experience: { website, logo, title, role, start, end },
+  experience: { website, logo, title, bg, role, start, end },
 } = Astro.props;
 ---
 
@@ -15,14 +15,24 @@ const {
   <div
     class="px-3 py-2 flex items-center gap-2 w-full rounded-xl overflow-hidden hover:bg-gray-100"
   >
-    <img src={logo} class="size-10 rounded-lg" />
+    {
+      bg ? (
+        <img
+          src={logo}
+          class="size-10 rounded-lg p-2.5"
+          style={`background-color: ${bg};`}
+        />
+      ) : (
+        <img src={logo} class="size-10 rounded-lg" />
+      )
+    }
     <div class="w-full flex items-center justify-between">
       <div>
         <h1 class="font-medium">{title}</h1>
         <p class="text-gray-400 text-sm">{role}</p>
       </div>
       <Badge>
-        {start} - {end}
+        {start}{end ? ` - ${end}` : ""}
       </Badge>
     </div>
   </div>

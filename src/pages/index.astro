@@ -2,8 +2,8 @@
 import Typography from "../components/Typography.astro";
 import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
-import { experience } from "../consts/experience";
-import ExperienceCard from "../components/ExperienceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects, experience } from "../consts/work";
 ---
 
 <Layout>
@@ -15,13 +15,14 @@ import ExperienceCard from "../components/ExperienceCard.astro";
     global payroll platform, and full-stack at Super, a website builder for
     Notion.
   </Typography>
-  <Section title="Experience" class="mt-16">
+  <Section title="Work Experience" class="mt-16">
     <div class="flex flex-col gap-2">
-      {
-        experience.map((experience) => (
-          <ExperienceCard experience={experience} />
-        ))
-      }
+      {experience.map((experience) => <ProjectCard experience={experience} />)}
+    </div>
+  </Section>
+  <Section title="Projects" class="my-16">
+    <div class="flex flex-col gap-2">
+      {projects.map((project) => <ProjectCard experience={project} />)}
     </div>
   </Section>
 </Layout>

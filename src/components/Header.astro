@@ -3,11 +3,21 @@ import Typography from "./Typography.astro";
 ---
 
 <header class="py-9 flex items-center justify-between">
-  <div>
-    <Typography>Josh Werner</Typography>
-  </div>
+  <a href="/">
+    <p class="la-belle-aurore-regular text-xl text-gray-900">josh</p>
+  </a>
   <div class="flex gap-5">
     <Typography>Projects</Typography>
     <Typography>Photos</Typography>
   </div>
 </header>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+
+  .la-belle-aurore-regular {
+    font-family: "La Belle Aurore", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>

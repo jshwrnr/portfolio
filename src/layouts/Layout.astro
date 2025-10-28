@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 ---
 
@@ -12,12 +13,13 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Josh Werner</title>
   </head>
-  <body>
-    <div class="container max-w-3xl mx-auto px-7">
+  <body class="min-h-screen flex flex-col">
+    <div class="container max-w-3xl mx-auto px-7 flex flex-col grow">
       <Header />
       <main class="py-7">
         <slot />
       </main>
+      <Footer />
     </div>
   </body>
 </html>

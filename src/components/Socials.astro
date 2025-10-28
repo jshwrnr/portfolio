@@ -1,0 +1,15 @@
+---
+import { SOCIALS } from "../consts/socials";
+import LinkedIn from "./icons/LinkedIn.astro";
+import X from "./icons/X.astro";
+import NewTab from "./NewTab.astro";
+---
+
+<div class="flex items-center gap-3">
+  <NewTab href={SOCIALS.LINKED_IN}>
+    <X />
+  </NewTab>
+  <NewTab href={SOCIALS.LINKED_IN}>
+    <LinkedIn />
+  </NewTab>
+</div>

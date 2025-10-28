@@ -44,7 +44,7 @@ export const projects: Project[] = [
   {
     title: "CryptoFighters",
     logo: cryptoFightersLogo.src,
-    website: "https://cryptofighters.io/",
+    website: "https://cryptofighters.io",
     role: "Frontend Developer",
     start: 2017,
     end: 2018,

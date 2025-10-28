@@ -1,6 +1,9 @@
 ---
 import Typography from "../components/Typography.astro";
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
+import { experience } from "../consts/experience";
+import ExperienceCard from "../components/ExperienceCard.astro";
 ---
 
 <Layout>
@@ -11,14 +14,13 @@ import Layout from "../layouts/Layout.astro";
     <Typography variant="em">elegant, high-performance</Typography>
     {" products for the web."}
   </Typography>
-  <div class="pt-16">
-    <Typography variant="h2">Projects</Typography>
-    <div class="grid grid-cols-2 gap-4">
+  <Section title="Experience" class="mt-16">
+    <div class="flex flex-col gap-2">
       {
-        Array.from({ length: 4 }).map((_,i) => (
-          <div class="border h-50 rounded-xl border-gray-200 overflow-hidden"></div>
+        experience.map((experience) => (
+          <ExperienceCard experience={experience} />
         ))
       }
     </div>
-  </div>
+  </Section>
 </Layout>

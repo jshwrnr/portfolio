@@ -1,0 +1,29 @@
+---
+import Badge from "./Badge.astro";
+import NewTab from "./NewTab.astro";
+
+interface Props {
+  experience: Experience;
+}
+
+const {
+  experience: { website, logo, title, role, start, end },
+} = Astro.props;
+---
+
+<NewTab href={website}>
+  <div
+    class="px-3 py-2 flex items-center gap-2 w-full rounded-xl overflow-hidden hover:bg-gray-100"
+  >
+    <img src={logo} class="size-10 rounded-lg" />
+    <div class="w-full flex items-center justify-between">
+      <div>
+        <h1 class="font-medium">{title}</h1>
+        <p class="text-gray-400 text-sm">{role}</p>
+      </div>
+      <Badge>
+        {start} - {end}
+      </Badge>
+    </div>
+  </div>
+</NewTab>

@@ -1,0 +1,15 @@
+---
+import Typography from "./Typography.astro";
+
+interface Props {
+  title?: string;
+  class?: string;
+}
+
+const { title, class: className } = Astro.props;
+---
+
+<section class={className}>
+  {title ? <Typography variant="h2">{title}</Typography> : null}
+  <slot />
+</section>

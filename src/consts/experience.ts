@@ -22,7 +22,8 @@ export const experience: Experience[] = [
   {
     title: "Lifeslice",
     logo: lifesliceLogo.src,
-    website: "https://www.facebook.com/lifesliceapp",
+    website:
+      "https://web.archive.org/web/20181130032312/https://www.lifeslice.io",
     role: "Frontend Developer",
     start: 2017,
     end: 2018,

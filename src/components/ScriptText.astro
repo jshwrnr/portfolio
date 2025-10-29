@@ -1,4 +1,19 @@
-<p class="la-belle-aurore-regular text-xl text-gray-900">
+---
+interface Props {
+  size?: string;
+  class?: string;
+}
+
+const { size, class: className } = Astro.props;
+---
+
+<p
+  class:list={[
+    "la-belle-aurore-regular text-gray-900",
+    size || "text-xl",
+    className,
+  ]}
+>
   <slot />
 </p>
 

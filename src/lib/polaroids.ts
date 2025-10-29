@@ -5,7 +5,8 @@ export const blackAndWhitePolaroids: Polaroid[] = [
     size: "sm",
     label: {
       text: "boat and birds",
-      class: "top-3 -rotate-6 text-center",
+      size: "text-2xl",
+      class: "top-3 -rotate-4 text-center",
     },
     date: "September 1, 2018",
   },
@@ -32,7 +33,7 @@ export const blackAndWhitePolaroids: Polaroid[] = [
     size: "sm",
     label: {
       text: "the brooklyn bridge is iconic!",
-      class: "top-2 -rotate-3",
+      class: "top-2 rotate-3 text-right",
     },
     date: "May 20, 2020",
     location: "New York City",

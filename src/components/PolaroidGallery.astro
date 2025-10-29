@@ -1,0 +1,20 @@
+---
+import Polaroid from "./Polaroid.astro";
+import PolaroidText from "./PolaroidText.astro";
+
+interface Props {
+  polaroids: Polaroid[];
+}
+
+const { polaroids } = Astro.props;
+---
+
+<div class="grid grid-cols-2 gap-4">
+  {
+    polaroids.map(({ rotate, src, size, label }) => (
+      <Polaroid rotate={rotate} src={src} size={size}>
+        {label ? <PolaroidText text={label.text} class={label.class} /> : null}
+      </Polaroid>
+    ))
+  }
+</div>

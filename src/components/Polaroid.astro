@@ -1,0 +1,48 @@
+---
+interface Props {
+  rotate?: PolaroidRotate;
+  src: string;
+  size?: "sm" | "md" | "lg";
+}
+
+const { rotate = "none", src, size = "md" } = Astro.props;
+---
+
+<div
+  class:list={[
+    "bg-white rounded-sm h-fit shadow-2xl px-3 pt-3 transition-all duration-300 ease-[cubic-bezier(0.77,0,0.175,1)]",
+    // Hover
+    "hover:scale-105 hover:rotate-0",
+    // Size
+    size === "sm" ? "w-72 h-72" : "",
+    size === "md" ? "w-80 h-80" : "",
+    size === "lg" ? "w-96 h-96" : "",
+    // Rotate
+    rotate === "-2xl" ? "-rotate-24" : "",
+    rotate === "-xl" ? "-rotate-18" : "",
+    rotate === "-lg" ? "-rotate-12" : "",
+    rotate === "-md" ? "-rotate-6" : "",
+    rotate === "-sm" ? "-rotate-3" : "",
+    rotate === "-xs" ? "-rotate-2" : "",
+    rotate === "none" ? "none" : "",
+    rotate === "xs" ? "rotate-2" : "",
+    rotate === "sm" ? "rotate-3" : "",
+    rotate === "md" ? "rotate-6" : "",
+    rotate === "lg" ? "rotate-12" : "",
+    rotate === "xl" ? "rotate-18" : "",
+    rotate === "2xl" ? "rotate-24" : "",
+  ]}
+>
+  <img
+    src={src}
+    class:list={[
+      "object-cover rounded-xs",
+      size === "sm" ? "w-72 h-72" : "",
+      size === "md" ? "w-80 h-80" : "",
+      size === "lg" ? "w-96 h-96" : "",
+    ]}
+  />
+  <div class="min-h-13 pb-5">
+    <slot />
+  </div>
+</div>

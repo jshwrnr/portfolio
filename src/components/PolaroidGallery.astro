@@ -11,8 +11,14 @@ const { polaroids } = Astro.props;
 
 <div class="flex flex-col items-center md:grid md:grid-cols-2 gap-4">
   {
-    polaroids.map(({ class: className, src, size, label }) => (
-      <Polaroid src={src} size={size} class={className}>
+    polaroids.map(({ class: className, src, size, label, date, location }) => (
+      <Polaroid
+        src={src}
+        size={size}
+        class={className}
+        date={date}
+        location={location}
+      >
         {label ? <PolaroidText text={label.text} class={label.class} /> : null}
       </Polaroid>
     ))

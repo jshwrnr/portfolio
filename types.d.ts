@@ -29,4 +29,6 @@ interface Polaroid {
   size?: "sm" | "md" | "lg";
   label?: { text: string; class?: string };
   pos?: { top?: number; left?: number; bottom?: number; right?: number };
+  date?: string;
+  location?: string;
 }

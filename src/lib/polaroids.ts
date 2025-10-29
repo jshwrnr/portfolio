@@ -28,7 +28,7 @@ export const blackAndWhitePolaroids: Polaroid[] = [
   },
   {
     src: "https://images.unsplash.com/photo-1504019853082-9a4cb128c1ef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
-    class: "rotate-3",
+    class: "rotate-3 -top-6",
     size: "sm",
     label: {
       text: "the brooklyn bridge is iconic!",

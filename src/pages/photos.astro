@@ -2,10 +2,10 @@
 import Typography from "../components/common/Typography.astro";
 import PolaroidGallery from "../components/PolaroidGallery.astro";
 import Layout from "../layouts/Layout.astro";
-import { polaroids } from "../lib/polaroids";
+import { blackAndWhitePolaroids } from "../lib/polaroids";
 ---
 
 <Layout>
   <Typography class="mb-4">(these are mock photos just for testing)</Typography>
-  <PolaroidGallery polaroids={polaroids} />
+  <PolaroidGallery polaroids={blackAndWhitePolaroids} />
 </Layout>

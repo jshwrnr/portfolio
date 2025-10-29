@@ -25,7 +25,7 @@ type PolaroidRotate =
 
 interface Polaroid {
   src: string;
-  rotate?: PolaroidRotate;
+  class?: string;
   size?: "sm" | "md" | "lg";
   label?: { text: string; class?: string };
   pos?: { top?: number; left?: number; bottom?: number; right?: number };

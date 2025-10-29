@@ -10,7 +10,7 @@ interface Props {
 const { title, projects } = Astro.props;
 ---
 
-<Section title={title} class="mt-16">
+<Section title={title}>
   <div class="flex flex-col">
     {projects.map((project) => <ProjectCard experience={project} />)}
   </div>

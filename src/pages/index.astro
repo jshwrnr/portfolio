@@ -14,6 +14,8 @@ import ProjectsSection from "../components/ProjectsSection.astro";
     global payroll platform, and full-stack at Super, a website builder for
     Notion.
   </Typography>
-  <ProjectsSection title="Work Experience" projects={experience} />
-  <ProjectsSection title="Projects" projects={projects} />
+  <div class="my-16 space-y-16">
+    <ProjectsSection title="Work Experience" projects={experience} />
+    <ProjectsSection title="Projects" projects={projects} />
+  </div>
 </Layout>

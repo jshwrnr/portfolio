@@ -9,7 +9,7 @@ export const experience: Project[] = [
   {
     title: "Inbox Zero",
     logo: inboxZeroLogo.src,
-    website: "",
+    website: "https://getinboxzero.com",
     role: "Full-stack Developer",
     start: 2025,
     end: 2026,

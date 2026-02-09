@@ -3,8 +3,17 @@ import superLogo from "../assets/work/super.jpg";
 import lifesliceLogo from "../assets/work/lifeslice.png";
 import cryptoFightersLogo from "../assets/work/cryptofighters.svg";
 import designByAyeletLogo from "../assets/work/designbyayelet.png";
+import inboxZeroLogo from "../assets/work/inbox-zero.png";
 
 export const experience: Project[] = [
+  {
+    title: "Inbox Zero",
+    logo: inboxZeroLogo.src,
+    website: "https://getinboxzero.com",
+    role: "Full-stack Developer",
+    start: 2025,
+    end: 2026,
+  },
   {
     title: "Super",
     logo: superLogo.src,

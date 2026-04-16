@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-  experience: { website, logo, title, bg, role, start, end },
+  experience: { website, logo, title, bg, subtitle, start, end },
 } = Astro.props;
 ---
 
@@ -31,7 +31,7 @@ const {
     <div class="w-full flex items-center justify-between">
       <div>
         <h1 class="font-medium">{title}</h1>
-        <p class="text-gray-400 text-sm">{role}</p>
+        <p class="text-gray-400 text-sm">{subtitle}</p>
       </div>
       <Badge>
         {start}{end ? ` - ${end}` : ""}

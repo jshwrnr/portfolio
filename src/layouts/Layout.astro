@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import "../styles/global.css";
 ---
 
@@ -12,6 +13,7 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Josh Werner</title>
+    <GoogleAnalytics />
   </head>
   <body class="min-h-screen flex flex-col">
     <div class="container max-w-3xl mx-auto px-7 flex flex-col grow">
